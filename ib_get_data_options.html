@@ -35,7 +35,7 @@
 <dl>
 <dt id="trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions"><code class="flex name class">
 <span>class <span class="ident">IBGetDataOptions</span></span>
-<span>(</span><span>config: Dict, data_loader: trading_bot_common.data_loader.OHLCDataLoader, logger: trading_bot_common.logger.Logger, ib: ib_insync.ib.IB, option_exchange: str = 'GLOBEX', options_right=['P', 'C'], uncertainty=0.05)</span>
+<span>(</span><span>config: Dict, data_loader: trading_bot_common.data_loader.OHLCDataLoader, logger: trading_bot_common.logger.Logger, ib: ib_insync.ib.IB, option_exchange: str = 'GLOBEX', options_right=['P', 'C'])</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Scrape data from ib.</p></div>
@@ -45,23 +45,11 @@
 </ul>
 <h3>Methods</h3>
 <dl>
-<dt id="trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions.binary_search"><code class="name flex">
-<span>def <span class="ident">binary_search</span></span>(<span>self, low_index, high_index, current_element, put_or_call: <a title="trading_bot_connector_ib.ib_get_data_options.PutOrCall" href="#trading_bot_connector_ib.ib_get_data_options.PutOrCall">PutOrCall</a>)</span>
-</code></dt>
-<dd>
-<div class="desc"></div>
-</dd>
 <dt id="trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions.download_data"><code class="name flex">
 <span>def <span class="ident">download_data</span></span>(<span>self) ‑> int</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Download data from ib.</p></div>
-</dd>
-<dt id="trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions.options_get_delta"><code class="name flex">
-<span>def <span class="ident">options_get_delta</span></span>(<span>self, index, put_or_call: <a title="trading_bot_connector_ib.ib_get_data_options.PutOrCall" href="#trading_bot_connector_ib.ib_get_data_options.PutOrCall">PutOrCall</a>)</span>
-</code></dt>
-<dd>
-<div class="desc"></div>
 </dd>
 </dl>
 </dd>
@@ -144,9 +132,7 @@
 <li>
 <h4><code><a title="trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions" href="#trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions">IBGetDataOptions</a></code></h4>
 <ul class="">
-<li><code><a title="trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions.binary_search" href="#trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions.binary_search">binary_search</a></code></li>
 <li><code><a title="trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions.download_data" href="#trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions.download_data">download_data</a></code></li>
-<li><code><a title="trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions.options_get_delta" href="#trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions.options_get_delta">options_get_delta</a></code></li>
 </ul>
 </li>
 <li>
