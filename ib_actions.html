@@ -47,7 +47,7 @@
 <h3>Methods</h3>
 <dl>
 <dt id="trading_bot_connector_ib.ib_actions.IBActions.cancel_orders"><code class="name flex">
-<span>def <span class="ident">cancel_orders</span></span>(<span>self, row, trades) ‑> None</span>
+<span>def <span class="ident">cancel_orders</span></span>(<span>self, rows, trades) ‑> None</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Cancel all open orders for a pair.</p></div>
@@ -71,10 +71,16 @@
 <div class="desc"></div>
 </dd>
 <dt id="trading_bot_connector_ib.ib_actions.IBActions.get_open_orders"><code class="name flex">
-<span>def <span class="ident">get_open_orders</span></span>(<span>self, row) ‑> List</span>
+<span>def <span class="ident">get_open_orders</span></span>(<span>self, rows) ‑> List</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get open orders for a pair.</p></div>
+</dd>
+<dt id="trading_bot_connector_ib.ib_actions.IBActions.set_combo_order"><code class="name flex">
+<span>def <span class="ident">set_combo_order</span></span>(<span>self, trade)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set a combo order.</p></div>
 </dd>
 <dt id="trading_bot_connector_ib.ib_actions.IBActions.set_limit_future_order"><code class="name flex">
 <span>def <span class="ident">set_limit_future_order</span></span>(<span>self, trade, row) ‑> ib_insync.order.Trade</span>
@@ -93,6 +99,12 @@
 </code></dt>
 <dd>
 <div class="desc"><p>Set an OCO limit order.</p></div>
+</dd>
+<dt id="trading_bot_connector_ib.ib_actions.IBActions.set_protection_orders"><code class="name flex">
+<span>def <span class="ident">set_protection_orders</span></span>(<span>self, trade) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
 </dd>
 <dt id="trading_bot_connector_ib.ib_actions.IBActions.set_stop_limit_order"><code class="name flex">
 <span>def <span class="ident">set_stop_limit_order</span></span>(<span>self, pair: str, side: enum.Enum, amount: float, price: float, stop_price: float) ‑> bool</span>
@@ -138,9 +150,11 @@
 <li><code><a title="trading_bot_connector_ib.ib_actions.IBActions.get_ballance" href="#trading_bot_connector_ib.ib_actions.IBActions.get_ballance">get_ballance</a></code></li>
 <li><code><a title="trading_bot_connector_ib.ib_actions.IBActions.get_contract_value" href="#trading_bot_connector_ib.ib_actions.IBActions.get_contract_value">get_contract_value</a></code></li>
 <li><code><a title="trading_bot_connector_ib.ib_actions.IBActions.get_open_orders" href="#trading_bot_connector_ib.ib_actions.IBActions.get_open_orders">get_open_orders</a></code></li>
+<li><code><a title="trading_bot_connector_ib.ib_actions.IBActions.set_combo_order" href="#trading_bot_connector_ib.ib_actions.IBActions.set_combo_order">set_combo_order</a></code></li>
 <li><code><a title="trading_bot_connector_ib.ib_actions.IBActions.set_limit_future_order" href="#trading_bot_connector_ib.ib_actions.IBActions.set_limit_future_order">set_limit_future_order</a></code></li>
 <li><code><a title="trading_bot_connector_ib.ib_actions.IBActions.set_limit_order" href="#trading_bot_connector_ib.ib_actions.IBActions.set_limit_order">set_limit_order</a></code></li>
 <li><code><a title="trading_bot_connector_ib.ib_actions.IBActions.set_oco_limit_order" href="#trading_bot_connector_ib.ib_actions.IBActions.set_oco_limit_order">set_oco_limit_order</a></code></li>
+<li><code><a title="trading_bot_connector_ib.ib_actions.IBActions.set_protection_orders" href="#trading_bot_connector_ib.ib_actions.IBActions.set_protection_orders">set_protection_orders</a></code></li>
 <li><code><a title="trading_bot_connector_ib.ib_actions.IBActions.set_stop_limit_order" href="#trading_bot_connector_ib.ib_actions.IBActions.set_stop_limit_order">set_stop_limit_order</a></code></li>
 <li><code><a title="trading_bot_connector_ib.ib_actions.IBActions.should_end_oco_order" href="#trading_bot_connector_ib.ib_actions.IBActions.should_end_oco_order">should_end_oco_order</a></code></li>
 <li><code><a title="trading_bot_connector_ib.ib_actions.IBActions.should_end_stop_limit_buy_order" href="#trading_bot_connector_ib.ib_actions.IBActions.should_end_stop_limit_buy_order">should_end_stop_limit_buy_order</a></code></li>
