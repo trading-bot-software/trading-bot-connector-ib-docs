@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.10.0" />
-<title>trading_bot_ib API documentation</title>
-<meta name="description" content="" />
+<title>trading_bot_ib.config.ib_option_config_loader API documentation</title>
+<meta name="description" content="Common functionality for binance for actions and data collection." />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
 <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
@@ -19,32 +19,67 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title">Package <code>trading_bot_ib</code></h1>
+<h1 class="title">Module <code>trading_bot_ib.config.ib_option_config_loader</code></h1>
 </header>
 <section id="section-intro">
+<p>Common functionality for binance for actions and data collection.</p>
 </section>
 <section>
-<h2 class="section-title" id="header-submodules">Sub-modules</h2>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
-<dt><code class="name"><a title="trading_bot_ib.config" href="config/index.html">trading_bot_ib.config</a></code></dt>
+<dt id="trading_bot_ib.config.ib_option_config_loader.load_ib"><code class="name flex">
+<span>def <span class="ident">load_ib</span></span>(<span>host: str = '127.0.0.1', port: int = 7497, account_id: str = '', asyncPatchNeeded=False) ‑> ib_insync.ib.IB</span>
+</code></dt>
 <dd>
-<div class="desc"></div>
-</dd>
-<dt><code class="name"><a title="trading_bot_ib.data" href="data/index.html">trading_bot_ib.data</a></code></dt>
-<dd>
-<div class="desc"></div>
-</dd>
-<dt><code class="name"><a title="trading_bot_ib.trade" href="trade/index.html">trading_bot_ib.trade</a></code></dt>
-<dd>
-<div class="desc"></div>
+<div class="desc"><p>Load ib connection.</p></div>
 </dd>
 </dl>
 </section>
 <section>
-</section>
-<section>
-</section>
-<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader"><code class="flex name class">
+<span>class <span class="ident">IBOptionConfigLoader</span></span>
+<span>(</span><span>bot_id: str, database: trading_bot_common.database.Database = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Used to store the config in database and file.</p>
+<p>Variables that can be extended:</p>
+<p>table_name: set a unique table name</p>
+<p>create_query: set a create query based on names and types your plugin uses.</p>
+<p>If you do extend this class, you can/should create also ConfigNames and ConfigTypes.
+Also, you can/should define objects that you want long lived in the constructor.
+This object, the config loader, gets loaded once and never gets destroyed.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>trading_bot_common.config.config_loader.ConfigLoader</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader.create_query"><code class="name">var <span class="ident">create_query</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader.table_name"><code class="name">var <span class="ident">table_name</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader.load_from_file"><code class="name flex">
+<span>def <span class="ident">load_from_file</span></span>(<span>self) ‑> Dict</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Load the config json data from the file.</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
 </section>
 </article>
 <nav id="sidebar">
@@ -53,11 +88,26 @@
 <ul></ul>
 </div>
 <ul id="index">
-<li><h3><a href="#header-submodules">Sub-modules</a></h3>
+<li><h3>Super-module</h3>
 <ul>
-<li><code><a title="trading_bot_ib.config" href="config/index.html">trading_bot_ib.config</a></code></li>
-<li><code><a title="trading_bot_ib.data" href="data/index.html">trading_bot_ib.data</a></code></li>
-<li><code><a title="trading_bot_ib.trade" href="trade/index.html">trading_bot_ib.trade</a></code></li>
+<li><code><a title="trading_bot_ib.config" href="index.html">trading_bot_ib.config</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="trading_bot_ib.config.ib_option_config_loader.load_ib" href="#trading_bot_ib.config.ib_option_config_loader.load_ib">load_ib</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader" href="#trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader">IBOptionConfigLoader</a></code></h4>
+<ul class="">
+<li><code><a title="trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader.create_query" href="#trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader.create_query">create_query</a></code></li>
+<li><code><a title="trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader.load_from_file" href="#trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader.load_from_file">load_from_file</a></code></li>
+<li><code><a title="trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader.table_name" href="#trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader.table_name">table_name</a></code></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

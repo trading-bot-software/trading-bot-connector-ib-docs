@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.10.0" />
-<title>trading_bot_connector_ib.ib_get_data_options API documentation</title>
+<title>trading_bot_ib.data.ib_option_downloader API documentation</title>
 <meta name="description" content="Scrape data from ib." />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
@@ -19,7 +19,7 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title">Module <code>trading_bot_connector_ib.ib_get_data_options</code></h1>
+<h1 class="title">Module <code>trading_bot_ib.data.ib_option_downloader</code></h1>
 </header>
 <section id="section-intro">
 <p>Scrape data from ib.</p>
@@ -33,83 +33,23 @@
 <section>
 <h2 class="section-title" id="header-classes">Classes</h2>
 <dl>
-<dt id="trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions"><code class="flex name class">
+<dt id="trading_bot_ib.data.ib_option_downloader.IBGetDataOptions"><code class="flex name class">
 <span>class <span class="ident">IBGetDataOptions</span></span>
-<span>(</span><span>config: Dict, data_loader: trading_bot_common.data_loader.OHLCDataLoader, logger: trading_bot_common.logger.Logger, ib: ib_insync.ib.IB, option_exchange: str = 'GLOBEX', options_right=['P', 'C'])</span>
+<span>(</span><span>config: Dict, logger: trading_bot_common.logger.Logger, data_loader: trading_bot_common.data.data_loader.DataLoader, config_loader: <a title="trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader" href="../config/ib_option_config_loader.html#trading_bot_ib.config.ib_option_config_loader.IBOptionConfigLoader">IBOptionConfigLoader</a>)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Scrape data from ib.</p></div>
 <h3>Ancestors</h3>
 <ul class="hlist">
-<li>trading_bot_common.data_loader.DataDownloader</li>
+<li>trading_bot_common.data.data_downloader.DataDownloader</li>
 </ul>
 <h3>Methods</h3>
 <dl>
-<dt id="trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions.download_data"><code class="name flex">
+<dt id="trading_bot_ib.data.ib_option_downloader.IBGetDataOptions.download_data"><code class="name flex">
 <span>def <span class="ident">download_data</span></span>(<span>self) ‑> int</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Download data from ib.</p></div>
-</dd>
-</dl>
-</dd>
-<dt id="trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType"><code class="flex name class">
-<span>class <span class="ident">IBOptionsMarketType</span></span>
-<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Set the market data type used for :meth:<code>.reqMktData</code>.
-* 1 = Live
-* 2 = Frozen
-* 3 = Delayed
-* 4 = Delayed frozen</p></div>
-<h3>Ancestors</h3>
-<ul class="hlist">
-<li>enum.IntEnum</li>
-<li>builtins.int</li>
-<li>enum.Enum</li>
-</ul>
-<h3>Class variables</h3>
-<dl>
-<dt id="trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType.DELAYED"><code class="name">var <span class="ident">DELAYED</span></code></dt>
-<dd>
-<div class="desc"></div>
-</dd>
-<dt id="trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType.FROZEN"><code class="name">var <span class="ident">FROZEN</span></code></dt>
-<dd>
-<div class="desc"></div>
-</dd>
-<dt id="trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType.FROZEN_DELAYED"><code class="name">var <span class="ident">FROZEN_DELAYED</span></code></dt>
-<dd>
-<div class="desc"></div>
-</dd>
-<dt id="trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType.LIVE"><code class="name">var <span class="ident">LIVE</span></code></dt>
-<dd>
-<div class="desc"></div>
-</dd>
-</dl>
-</dd>
-<dt id="trading_bot_connector_ib.ib_get_data_options.PutOrCall"><code class="flex name class">
-<span>class <span class="ident">PutOrCall</span></span>
-<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>An enumeration.</p></div>
-<h3>Ancestors</h3>
-<ul class="hlist">
-<li>enum.IntEnum</li>
-<li>builtins.int</li>
-<li>enum.Enum</li>
-</ul>
-<h3>Class variables</h3>
-<dl>
-<dt id="trading_bot_connector_ib.ib_get_data_options.PutOrCall.CALL"><code class="name">var <span class="ident">CALL</span></code></dt>
-<dd>
-<div class="desc"></div>
-</dd>
-<dt id="trading_bot_connector_ib.ib_get_data_options.PutOrCall.PUT"><code class="name">var <span class="ident">PUT</span></code></dt>
-<dd>
-<div class="desc"></div>
 </dd>
 </dl>
 </dd>
@@ -124,31 +64,15 @@
 <ul id="index">
 <li><h3>Super-module</h3>
 <ul>
-<li><code><a title="trading_bot_connector_ib" href="index.html">trading_bot_connector_ib</a></code></li>
+<li><code><a title="trading_bot_ib.data" href="index.html">trading_bot_ib.data</a></code></li>
 </ul>
 </li>
 <li><h3><a href="#header-classes">Classes</a></h3>
 <ul>
 <li>
-<h4><code><a title="trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions" href="#trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions">IBGetDataOptions</a></code></h4>
+<h4><code><a title="trading_bot_ib.data.ib_option_downloader.IBGetDataOptions" href="#trading_bot_ib.data.ib_option_downloader.IBGetDataOptions">IBGetDataOptions</a></code></h4>
 <ul class="">
-<li><code><a title="trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions.download_data" href="#trading_bot_connector_ib.ib_get_data_options.IBGetDataOptions.download_data">download_data</a></code></li>
-</ul>
-</li>
-<li>
-<h4><code><a title="trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType" href="#trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType">IBOptionsMarketType</a></code></h4>
-<ul class="">
-<li><code><a title="trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType.DELAYED" href="#trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType.DELAYED">DELAYED</a></code></li>
-<li><code><a title="trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType.FROZEN" href="#trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType.FROZEN">FROZEN</a></code></li>
-<li><code><a title="trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType.FROZEN_DELAYED" href="#trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType.FROZEN_DELAYED">FROZEN_DELAYED</a></code></li>
-<li><code><a title="trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType.LIVE" href="#trading_bot_connector_ib.ib_get_data_options.IBOptionsMarketType.LIVE">LIVE</a></code></li>
-</ul>
-</li>
-<li>
-<h4><code><a title="trading_bot_connector_ib.ib_get_data_options.PutOrCall" href="#trading_bot_connector_ib.ib_get_data_options.PutOrCall">PutOrCall</a></code></h4>
-<ul class="">
-<li><code><a title="trading_bot_connector_ib.ib_get_data_options.PutOrCall.CALL" href="#trading_bot_connector_ib.ib_get_data_options.PutOrCall.CALL">CALL</a></code></li>
-<li><code><a title="trading_bot_connector_ib.ib_get_data_options.PutOrCall.PUT" href="#trading_bot_connector_ib.ib_get_data_options.PutOrCall.PUT">PUT</a></code></li>
+<li><code><a title="trading_bot_ib.data.ib_option_downloader.IBGetDataOptions.download_data" href="#trading_bot_ib.data.ib_option_downloader.IBGetDataOptions.download_data">download_data</a></code></li>
 </ul>
 </li>
 </ul>
