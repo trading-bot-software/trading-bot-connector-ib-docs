@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: trading-bot-software/trading-bot-connector-ib
+          repository: trading-bot-software/trading-bot-ib
           ref: gh-pages
           token: ${{ secrets.PAT_TOKEN }}
 
