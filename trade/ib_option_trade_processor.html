@@ -34,18 +34,31 @@
 <dl>
 <dt id="trading_bot_ib.trade.ib_option_trade_processor.IBOptionTradeProcessor"><code class="flex name class">
 <span>class <span class="ident">IBOptionTradeProcessor</span></span>
-<span>(</span><span>actions: trading_bot_common.trade.trade_actions.TradeActions, config: Dict, logger: trading_bot_common.logger.Logger, trades: pandas.core.frame.DataFrame)</span>
+<span>(</span><span>actions: <a title="trading_bot_ib.trade.ib_option_trade_actions.IBOptionTradeActions" href="ib_option_trade_actions.html#trading_bot_ib.trade.ib_option_trade_actions.IBOptionTradeActions">IBOptionTradeActions</a>, config: Dict, logger: trading_bot_common.logger.Logger, trades: pandas.core.frame.DataFrame)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Handles the order placing actions.</p>
-<p>Can be extended with custom functions.</p>
-<p>Here you would want to extend mainly:</p>
-<p>main_loop</p>
-<p>You would want to use actions in this function, from self.actions</p></div>
+<div class="desc"><p>Handles the order placing actions.</p></div>
 <h3>Ancestors</h3>
 <ul class="hlist">
 <li>trading_bot_common.trade.trade_processor.TradeProcessor</li>
 </ul>
+<h3>Methods</h3>
+<dl>
+<dt id="trading_bot_ib.trade.ib_option_trade_processor.IBOptionTradeProcessor.main_loop"><code class="name flex">
+<span>def <span class="ident">main_loop</span></span>(<span>self, row: pandas.core.series.Series)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Main loop for the trader.
+Iterates over the trades and checks if anything changes.
+Also makes order if needed.</p></div>
+</dd>
+<dt id="trading_bot_ib.trade.ib_option_trade_processor.IBOptionTradeProcessor.main_loop_df"><code class="name flex">
+<span>def <span class="ident">main_loop_df</span></span>(<span>self, df: pandas.core.frame.DataFrame)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Same as main_loop but iterates over the dataframe.</p></div>
+</dd>
+</dl>
 </dd>
 </dl>
 </section>
@@ -65,6 +78,10 @@
 <ul>
 <li>
 <h4><code><a title="trading_bot_ib.trade.ib_option_trade_processor.IBOptionTradeProcessor" href="#trading_bot_ib.trade.ib_option_trade_processor.IBOptionTradeProcessor">IBOptionTradeProcessor</a></code></h4>
+<ul class="">
+<li><code><a title="trading_bot_ib.trade.ib_option_trade_processor.IBOptionTradeProcessor.main_loop" href="#trading_bot_ib.trade.ib_option_trade_processor.IBOptionTradeProcessor.main_loop">main_loop</a></code></li>
+<li><code><a title="trading_bot_ib.trade.ib_option_trade_processor.IBOptionTradeProcessor.main_loop_df" href="#trading_bot_ib.trade.ib_option_trade_processor.IBOptionTradeProcessor.main_loop_df">main_loop_df</a></code></li>
+</ul>
 </li>
 </ul>
 </li>
