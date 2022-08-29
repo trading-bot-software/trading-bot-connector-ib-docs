@@ -41,7 +41,8 @@
 <p>Can be extended.</p>
 <p>table_name: extend with unique table name.</p>
 <p>create_query: extend with create_query that reflects the schema of database you want to use.</p>
-<p>date_rows: return array of all columns that will contain date objects.</p></div>
+<p>date_rows: return array of all columns that will contain date objects.</p>
+<p>get_data_id: returns id of data. Has to be unique.</p></div>
 <h3>Ancestors</h3>
 <ul class="hlist">
 <li>trading_bot_common.data.data_loader.DataLoader</li>
@@ -57,6 +58,15 @@
 <div class="desc"></div>
 </dd>
 <dt id="trading_bot_ib.data.ib_option_loader.IBOptionLoader.table_name"><code class="name">var <span class="ident">table_name</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="trading_bot_ib.data.ib_option_loader.IBOptionLoader.get_data_id"><code class="name flex">
+<span>def <span class="ident">get_data_id</span></span>(<span>self, row)</span>
+</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
@@ -83,6 +93,7 @@
 <ul class="">
 <li><code><a title="trading_bot_ib.data.ib_option_loader.IBOptionLoader.create_query" href="#trading_bot_ib.data.ib_option_loader.IBOptionLoader.create_query">create_query</a></code></li>
 <li><code><a title="trading_bot_ib.data.ib_option_loader.IBOptionLoader.date_rows" href="#trading_bot_ib.data.ib_option_loader.IBOptionLoader.date_rows">date_rows</a></code></li>
+<li><code><a title="trading_bot_ib.data.ib_option_loader.IBOptionLoader.get_data_id" href="#trading_bot_ib.data.ib_option_loader.IBOptionLoader.get_data_id">get_data_id</a></code></li>
 <li><code><a title="trading_bot_ib.data.ib_option_loader.IBOptionLoader.table_name" href="#trading_bot_ib.data.ib_option_loader.IBOptionLoader.table_name">table_name</a></code></li>
 </ul>
 </li>
